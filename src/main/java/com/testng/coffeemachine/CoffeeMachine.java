@@ -64,7 +64,7 @@ public class CoffeeMachine {
         if (tankContent == 0 || beansContent == 0) {
             coffeeServed = false;
         } else {
-            coffeeServed = true;
+            coffeeServed = false;
             tankContent -= 1;
             beansContent -= 1;
             groundsContent += 1;
