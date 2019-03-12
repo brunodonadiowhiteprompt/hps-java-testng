@@ -16,7 +16,8 @@ public class BeansTest {
         // And I handle everything except the beans
         actionwords.iHandleEverythingExceptTheBeans();
     }
-
+    //
+    // Tags: priority:high
     @Test
     public void messageFillBeansIsDisplayedAfter38CoffeesAreTaken() {
         // When I take "38" coffees
@@ -24,10 +25,11 @@ public class BeansTest {
         // Then message "Fill beans" should be displayed
         actionwords.messageMessageShouldBeDisplayed("Fill beans");
     }
-
+    //
+    // Tags: priority:low
     @Test
     public void itIsPossibleToTake40CoffeesBeforeThereIsReallyNoMoreBeans() {
-        // Given I take "40" coffees
+        // When I take "40" coffees
         actionwords.iTakeCoffeeNumberCoffees(40);
         // Then coffee should be served
         actionwords.coffeeShouldBeServed();
@@ -38,12 +40,13 @@ public class BeansTest {
         // And message "Fill beans" should be displayed
         actionwords.messageMessageShouldBeDisplayed("Fill beans");
     }
-
+    //
+    // Tags: priority:high
     @Test
     public void afterAddingBeansTheMessageFillBeansDisappears() {
-        // Given I take "40" coffees
+        // When I take "40" coffees
         actionwords.iTakeCoffeeNumberCoffees(40);
-        // When I fill the beans tank
+        // And I fill the beans tank
         actionwords.iFillTheBeansTank();
         // Then message "Ready" should be displayed
         actionwords.messageMessageShouldBeDisplayed("Ready");
